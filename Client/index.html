@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agario</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div id="content">
+        <h1>Agario</h1>
+        <div id="error"></div>
+        <div id="noerror">
+            <div id="user">
+                <span>My name is: </span>
+                <input type="text" id="user-name">
+                <button id="user-save">Save</button>
+            </div>
+            <br>
+            <div id="log">
+                <div class="message">Message Log:</div>
+            </div>
+            <br>
+            <div id="controls">
+                <button id="restart" disabled="true">Restart</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.16/p5.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
