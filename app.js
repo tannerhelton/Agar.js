@@ -6,7 +6,7 @@ var webroot = __dirname + '/client/';
 
 app.use('/', express.static(webroot));
 
-var server = http.listen(80, function () {
+var server = http.listen(443, function () {
     console.log('hosting from ' + webroot);
     console.log('server listening on https://test-app-98765.herokuapp.com/');
 });
