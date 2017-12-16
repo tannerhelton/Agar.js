@@ -8,7 +8,7 @@ app.use('/', express.static(webroot));
 
 var server = http.listen(80, function () {
     console.log('hosting from ' + webroot);
-    console.log('server listening on http://localhost:3000/');
+    console.log('server listening on https://test-app-98765.herokuapp.com/');
 });
 
 var users = [];
