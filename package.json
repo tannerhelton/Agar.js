@@ -1,13 +1,18 @@
 {
-    "name": "agar.js",
-    "description": "a really cool app",
+    "name": "Agario",
     "version": "1.0.0",
-    "engines": {
-        "node": "6.11.1"
-    },
+    "description": "Agario Game",
+    "main": "app.js",
     "scripts": {
-        "start": "node server/app.js",
-        "postinstall": "npm install socket.io",
-        "postinstall": "npm install express"
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [
+        "agario"
+    ],
+    "author": "tannerhelton",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.16.2",
+        "socket.io": "^2.0.4"
     }
 }

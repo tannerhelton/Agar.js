@@ -1,6 +1,6 @@
 var mainUser = '';
 var users = [];
-var socketServer = 'http://23.23.231.146:3000/';
+var socketServer = 'http://23.23.231.146:80/';
 var socket = io.connect(socketServer);
 var user;
 
