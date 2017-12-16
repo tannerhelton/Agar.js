@@ -1,6 +1,6 @@
 var mainUser = '';
 var users = [];
-var socketServer = 'https://test-app-98765.herokuapp.com/' + process.env.PORT;
+var socketServer = 'https://test-app-98765.herokuapp.com:' + process.env.PORT;
 var socket = io.connect(socketServer);
 var user;
 
