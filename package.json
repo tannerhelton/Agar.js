@@ -7,6 +7,6 @@
     },
     "scripts": {
         "start": "node server/app.js",
-        "postinstall": "npm install socket"
+        "postinstall": "npm install"
     }
 }
