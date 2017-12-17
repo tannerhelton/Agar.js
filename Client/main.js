@@ -1,7 +1,8 @@
 var mainUser = '';
 var users = [];
 var socketServer = 'https://test-app-98765.herokuapp.com:80';
-var socket = io.connect(socketServer);
+//var socket = io.connect(socketServer);
+var socket = io();
 var user;
 
 
