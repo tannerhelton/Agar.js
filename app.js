@@ -7,10 +7,7 @@ const local = false;
 var webroot = __dirname + '/client/';
 
 app.use('/', express.static(webroot));
-var server = http.listen(PORT, function () {
-    console.log('hosting from ' + webroot);
-    console.log('server listening on https://test-app-98765.herokuapp.com/');
-});
+var server = http.listen(process.env.PORT || 3000);
 
 var users = [];
 
