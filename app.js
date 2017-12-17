@@ -2,11 +2,11 @@ var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 const PORT = process.env.PORT || 3000;
+const local = false;
 
 var webroot = __dirname + '/client/';
 
 app.use('/', express.static(webroot));
-
 var server = http.listen(PORT, function () {
     console.log('hosting from ' + webroot);
     console.log('server listening on https://test-app-98765.herokuapp.com/');
