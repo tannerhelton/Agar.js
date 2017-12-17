@@ -1,12 +1,15 @@
 var express = require('express');
 var app = express();
-var http = require('http').createServer(app);
+var http = require('http').Server(app);
 const PORT = process.env.PORT || 3000;
 
-var webroot = __dirname + '/client/index.html';
+var webroot = __dirname + '/client/';
 
-app.use('/', express.static(webroot));
-var server = http.listen(PORT);
+//app.use('/', express.static(__dirname + '/client/'));
+//var server = http.listen(PORT);
+const server = express()
+    .use('/', express.static(__dirname + '/client/'))
+    .listen(PORT, () => console.log(`Listening on ${ PORT }`));
 
 var users = [];
 
