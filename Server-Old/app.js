@@ -1,12 +1,15 @@
 var express = require('express');
 var app = express();
-var http = require('http').createServer(app);
-const PORT = process.env.PORT || 3000;
+var http = require('http').Server(app);
 
-var webroot = __dirname + '/client/';
+var webroot = __dirname + '/../client/';
 
 app.use('/', express.static(webroot));
-var server = http.listen(PORT);
+
+var server = http.listen(3000, function () {
+    console.log('hosting from ' + webroot);
+    console.log('server listening on http://localhost:3000/');
+});
 
 var users = [];
 
@@ -39,7 +42,7 @@ io.sockets.on('connection', function (socket) {
         data.id = socket.id;
 
         users.push(data);
-
+        
         console.log('users : ' + users.length);
         socket.emit('start', users);
         socket.broadcast.emit('otherUserConnect', data);
