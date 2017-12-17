@@ -3,7 +3,7 @@ var app = express();
 var http = require('http').createServer(app);
 const PORT = process.env.PORT || 3000;
 
-var webroot = __dirname + '/client/';
+var webroot = __dirname + '/client/index.html';
 
 app.use('/', express.static(webroot));
 var server = http.listen(PORT);
